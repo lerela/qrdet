@@ -13,7 +13,8 @@ import requests
 import tqdm
 from yolov7_package import Yolov7Detector
 
-_WEIGHTS_PATH = os.path.join('.yolov7_qrdet', 'qrdet-yolov7.pt')
+
+_WEIGHTS_PATH = os.path.join(os.getenv("YOLO_MODELS", "."), '.yolov7_qrdet', 'qrdet-yolov7.pt')
 _WEIGHTS_URL = 'https://github.com/Eric-Canas/qrdet/releases/download/first_qrdet_yolov7/qrdet-yolov7.pt'
 
 
